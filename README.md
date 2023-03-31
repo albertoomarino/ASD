@@ -1,6 +1,6 @@
 # ASD - Algorithms and Data Structures
-Laboratory of Algorithms and Data Structures, Computer Science Course - A.Y. 2021/2022
-Department of Computer Science, University of Turin
+Laboratory of Algorithms and Data Structures, Computer Science Course - A.Y. 2021/2022  
+Department of Computer Science, University of Turin  
 Teachers: Roberto Micalizio
 
 ## Lab project
