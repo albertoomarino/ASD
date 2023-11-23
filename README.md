@@ -1,192 +1,64 @@
-# ASD - Algorithms and Data Structures
-Laboratory of Algorithms and Data Structures, Computer Science Course - A.Y. 2021/2022  
-Department of Computer Science, University of Turin  
-Teachers: Roberto Micalizio
+# Algorithms and data structures
 
-## Lab project
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Exercise 1](#exercise1)
+- [Exercise 2](#exercise2)
+- [Exercise 3](#exercise3)
+- [Exercise 4](#exercise4)
+- [License](#license)
+
+## Introduction
+
 The laboratory project consists in the implementation of four exercises (two developed in C language and two in Java language) as reported below.
 
-# Laboratorio per il corso di Algoritmi e Strutture Dati: regole d'esame, indicazioni generali e suggerimenti, consegne per gli esercizi
+## Exercise 1
 
-# Regole d'esame
+Implement a library that offers two sorting algorithms: `Quick Sort` and `Quick Sort`. By `Binary Insertion Sort`, we refer to a version of the `Insertion Sort` algorithm in which the position within the sorted section of the array to insert the current element is determined through binary search. In the implementation of `Quick Sort`, the choice of the pivot should be studied and discussed in the report.
 
----
-
-**Importante**: gli studenti che hanno nel piano di studi l'insegnamento di Algoritmi con un numero di CFU **differente da 9** sono pregati di contattare il docente al più presto, al fine di concordare un programma d'esame commisurato ai CFU.
-
----
-
-Il progetto di laboratorio può essere svolto individualmente o in gruppo (al più 3 persone). **I membri di uno stesso gruppo devono appartenere tutti allo stesso turno di laboratorio**.
-
-ll progetto di laboratorio va consegnato mediante Git (vedi sotto) entro e non oltre la data della prova scritta che si intende sostenere. E' vietato sostenere la prova scritta in caso di mancata consegna del progetto di laboratorio. In caso di superamento della prova scritta, la prova orale (discussione del laboratorio) va sostenuta, previa prenotazione mediante apposita procedura che sarà messa a disposizione sulla pagina i-learn del corso, **nella medesima sessione della prova scritta superata** (si ricorda che le sessioni sono giugno-luglio 2022, settembre 2022, dicembre 2022 e gennaio-febbraio 2023).
-
-Si noti che, per la sola sessione di giugno-luglio saranno previsti due appelli e, pertanto, esisteranno due possibilità per la discussione del laboratorio (primo o secondo appello della sessione). Nelle altre sessioni, l'appello è unico. Ad esempio, se la studentessa/lo studente X supera la prova scritta a dicembre 2022, deve necessariamente sostenere la discussione di laboratorio con la prova orale di dicembre 2022 (non sarà possibile discutere a gennaio-febbraio 2023).
-
-Esempio:
-
-- la studentessa/lo studente X sostiene la prova scritta nel primo appello di giugno;
-- la studentessa/lo studente X deve assicurarsi che il progetto su GitLab, alla data della prova scritta che intende sostenere (in questo esempio, quella del primo appello di giugno), sia aggiornato alla versione che vuole presentare al docente di laboratorio;
-- se la studentessa/lo studente X supera la prova scritta nel primo appello di giugno, deve (pena la perdita del voto ottenuto nella prova scritta) iscriversi a uno degli appelli orali di giugno o luglio, prenotarsi su i-learn in uno degli slot messi a disposizione dal docente del turno di appartenenza e sostenere l'orale nello slot temporale prenotato.
-
-Le regole riportate sopra si applicano alla singola studentessa/al singolo studente. Per poter accedere alla discussione di laboratorio è in ogni caso necessaria l'iscrizione alla prova orale corrispondente su myunito.
-
-Studentesse/studenti diversi, appartenenti allo stesso gruppo, possono sostenere la prova **scritta** nello stesso appello o in appelli diversi. Se studentesse/studenti diversi, appartenenti allo stesso gruppo, superano la prova scritta nello stesso appello, **devono** sostenere l' **orale** nello stesso appello orale. Se studentesse/studenti diversi, appartenenti allo stesso gruppo, superano la prova scritta in appelli diversi, **possono** sostenere l'**orale** in appelli diversi.
-
-Ad esempio, si consideri un gruppo di laboratorio costituito dalle studentesse/dagli studenti X, Y e Z, e si supponga che i soli X e Y sostengano la prova scritta nel primo appello di giugno, X con successo, mentre Y con esito insufficiente. Devono essere rispettate le seguenti condizioni:
-
-- alla data della prova scritta del primo appello di giugno, il progetto di laboratorio del gruppo deve essere aggiornato alla versione che si intende presentare;
-- il solo studente X deve sostenere la prova orale nella sessione giugno-luglio,  procedendo come indicato nell'esempio riportato sopra, mentre Y e Z sosterranno la discussione quando avranno superato la prova scritta.
-- Supponiamo che Y e Z superino la prova scritta nell'appello di gennaio: essi dovranno sostenere la prova orale nella sessione di gennaio-febbraio.
-- Gli studenti Y e Z dovranno, di norma, discutere la stessa versione del progetto di laboratorio che ha discusso lo studente X; i.e., eventuali modifiche al laboratorio successive alla discussione di X dovranno essere debitamente documentate (i.e., il log delle modifiche dovrà comparire su GitLab) e motivate.
-
-**Validità del progetto di laboratorio** : le specifiche per il progetto di laboratorio descritte in questo documento resteranno valide fino all'ultimo appello della sessione gennaio-febbraio relativa al corrente anno accademico **(vale a dire, quella di gennaio-febbraio 2023)** e non oltre! Gli appelli delle sessioni successive a questa dovranno essere sostenuti sulla base delle specifiche che verranno descritte nella prossima edizione del laboratorio di algoritmi.
+The code implementing `Quick Sort` and `Binary Insertion Sort` must be generic. Furthermore, the library must allow specifying (i.e., accepting as input) the criterion according to which to sort the data.
 
 
-# Indicazioni generali e suggerimenti
+Implement the unit tests for the library as suggested in the Unit Testing document.
 
-## Uso di Git
 
-Durante la scrittura del codice è richiesto di usare in modo appropriato il sistema di versioning Git. Questa richiesta implica quanto segue:
-
-- il progetto di laboratorio va inizializzato "clonando" il repository del laboratorio come descritto nel file Git.md;
-- come è prassi nei moderni ambienti di sviluppo, è richiesto di effettuare commit frequenti. L'ideale è un commit per ogni blocco di lavoro terminato (es. creazione e test di una nuova funzione, soluzione di un baco, creazione di una nuova interfaccia, ...);
-- ogni membro del gruppo dovrebbe effettuare il commit delle modifiche che lo hanno visto come principale sviluppatore;
-- al termine del lavoro si dovrà consegnare l'intero repository.
-
-Il file Git.md contiene un esempio di come usare Git per lo sviluppo degli esercizi proposti per questo laboratorio.
-
----
-
-**Nota importante**: Su git dovrà essere caricato solamente il codice sorgente, in particolare nessun file dati dovrà essere oggetto di commit!
-
----
-
-Si rammenta che la valutazione del progetto di laboratorio considererà anche l'uso adeguato di git da parte di ciascun membro del gruppo.
-
-## Linguaggio in cui sviluppare il laboratorio
-
-Gli esercizi vanno implementati utilizzando il linguaggio C o Java come precisato di seguito:
-
-- Esercizio 1: C
-- Esercizio 2: C
-- Esercizio 3: Java
-- Esercizio 4: Java
-
-Come indicato sotto, alcuni esercizi chiedono di implementare codice generico. Seguono alcuni suggerimenti sul modo di realizzare codice con questa caratteristica nei due linguaggi accettati.
-
-**Nota** : Con "codice generico" si intende codice che deve poter essere eseguito con tipi di dato non noti a tempo di compilazione.
-
-**Suggerimenti (C)**: Nel caso del C, è necessario capire come meglio approssimare l'idea di codice generico utilizzando quanto permesso dal linguaggio. Un approccio comune è far sì che le funzioni e le procedure presenti nel codice prendano in input puntatori a `void` e utilizzino qualche funzione fornita dall'utente per accedere alle componenti necessarie.
-
-Nota: chi è in grado di realizzare tipi di dato astratto tramite tipi opachi è incoraggiato a procedere in questa direzione.
-
-**Suggerimenti (Java)**: Sebbene in Java la soluzione più in linea con il moderno utilizzo del linguaggio richiederebbe la creazione di classi parametriche, tutte le scelte implementative (compresa la decisione di usare o meno classi parametriche) sono lasciate agli studenti. Inoltre, è possibile (e consigliato) usare gli ArrayList invece degli array nativi al fine di semplificare la realizzazione di codice generico.
-
-## Uso di librerie esterne e/o native del linguaggio scelto
-
-È vietato (sia nello sviluppo in Java che in quello in C) l'uso di strutture dati native del linguaggio scelto o offerte da librerie esterne, quando la loro realizzazione è richiesta da uno degli esercizi proposti.
-
-È, invece, possibile l'uso di strutture dati native del linguaggio o offerte da librerie esterne, se la loro realizzazione non è richiesta da uno degli esercizi proposti.
-
-Es.: nello sviluppo in Java, l'uso di ArrayList è da ritenersi possibile, se nessun esercizio chiede la realizzazione in Java di un array dinamico.
-
-## Qualità dell'implementazione
-
-È parte del mandato degli esercizi la realizzazione di codice di buona qualità.
-
-Per "buona qualità" intendiamo codice ben modularizzato, ben commentato e ben testato.
-
-**Alcuni suggerimenti:**
-
-- verificare che il codice sia suddiviso correttamente in package o moduli;
-- aggiungere un commento, prima di una definizione, che spiega il funzionamento dell'oggetto definito. Evitare quando possibile di commentare direttamente il codice interno alle funzioni/metodi implementati (se il codice è ben scritto, i commenti in genere non servono);
-- la lunghezza di un metodo/funzione è in genere un campanello di allarme: se essa cresce troppo, probabilmente è necessario rifattorizzare il codice spezzando la funzione in più parti. In linea di massima si può consigliare di intervenire quando la funzione cresce sopra le 30 righe (considerando anche commenti e spazi bianchi);
-- sono accettabili commenti in italiano, sebbene siano preferibili in inglese;
-- tutti i nomi (es., nomi di variabili, di metodi, di classi, ecc.) *devono* essere significativi e in inglese;
-- il codice deve essere correttamente indentato; impostare l'indentazione a 2 caratteri (un'indentazione di 4 caratteri è ammessa ma scoraggiata) e impostare l'editor in modo che inserisca "soft tabs" (cioè, deve inserire il numero corretto di spazi invece che un carattere di tabulazione);
-- per dare i nomi agli identificatori, seguire le convenzioni in uso per il linguaggio scelto:
-  - Java: i nomi dei package sono tutti in minuscolo senza separazione fra le parole (es. thepackage); i nomi dei tipi (classi, interfacce, ecc.) iniziano con una lettera maiuscola e proseguono in camel case (es. TheClass), i nomi dei metodi e delle variabili iniziano con una lettera minuscola e proseguono in camel case (es. theMethod), i nomi delle costanti sono tutti in maiuscolo e in formato snake case (es. THE\_CONSTANT);
-  - C:  macro e costanti sono tutti in maiuscolo e in formato snake case (es. THE\_MACRO, THE\_CONSTANT); i nomi di tipo (e.g.  struct, typedefs, enums, ...) iniziano con una lettera maiuscola e proseguono in camel case (e.g., TheType, TheStruct); i nomi di funzione iniziano con una lettera minuscola e proseguono in snake case (e.g., the\_function());
-- i file vanno salvati in formato UTF-8.
-
-# Consegne per gli esercizi
-
-**Nota** : la presente sezione contiene alcune formule descritte usando la sintassi \LaTeX. È possibile convertire l'intero documento in formato pdf - di più facile lettura - usando l'utility pandoc. Da riga di comando (Unix):
-
-pandoc README.md -o README.pdf
-
----
-
-**Importante**: Gli esercizi richiedono (fra le altre cose) di sviluppare codice generico. Nello sviluppare questa parte, si deve assumere di stare sviluppando una libreria generica intesa come fondamento di futuri programmi. Non è pertanto lecito fare assunzioni semplificative; in generale, l'implementazione della libreria generica deve restare separata e non deve essere influenzata in alcun modo dagli usi di essa eventualmente richiesti negli esercizi (ad esempio, se un esercizio dovesse richiedere l'implementazione della struttura dati grafo e quello stesso o un altro esercizio dovesse richiedere l'implementazione, a partire da tale struttura dati, di un algoritmo per il calcolo delle componenti connesse di un grafo, l'implementazione della struttura dati dovrebbe essere separata dall'algoritmo per il calcolo delle componenti connesse e *non* dovrebbe contenere elementi – variabili, procedure, funzioni, metodi, ecc. – eventualmente utili a tale algoritmo, ma non essenziali alla struttura dati; analogamente, se un esercizio dovesse richiedere di operare su grafi con nodi di tipo stringa, l'implementazione della struttura dati grafo dovrebbe restare generica e non potrebbe quindi assumere per i nodi il solo tipo stringa).
-
----
-
-In sede di discussione d'esame, sarà facoltà del docente chiedere di eseguire gli algoritmi implementati su dati forniti dal docente stesso. Nel caso questi dati siano memorizzati su file, questi saranno dei csv con la medesima struttura dei dataset forniti e descritti nel testo dell'esercizio. I codici sviluppati dovranno consentire un rapido e semplice adattamento agli input forniti: ad esempio, **una buona implementazione consentirà di inserire in input il nome del file su cui eseguire il test**, mentre una peggiore richiederà di modificare il codice sorgente e una successiva compilazione a fronte della sola modifica del nome del file contenente il dataset.
-
-## Unit Testing
-
-Come indicato esplicitamente nei testi degli esercizi, il progetto di laboratorio comprende anche la definizione di opportune suite di unit test.
-
-Si rammenta, però, che il focus del laboratorio è l'implementazione di strutture dati e algoritmi. Relativamente agli unit-test sarà quindi sufficiente che gli studenti dimostrino di averne colto il senso e di saper realizzare una suite di test sufficiente a coprire i casi più comuni e i casi limite.
-
-## Esercizio 1
-
-### Linguaggio richiesto: C
-
-### Testo
-
-Implementare una libreria che offre due algoritmi di ordinamento `Quick Sort` e `Binary Insertion Sort`. Con `Binary Insertion Sort` ci riferiamo a una versione dell'algoritmo `Insertion Sort` in cui la posizione all'interno della sezione ordinata del vettore in cui inserire l'elemento corrente è determinata tramite ricerca binaria. Nell'implementazione del `Quick Sort`, la scelta del `pivot` dovrà essere studiato e discusso nella relazione.
-
-Il codice che implementa `Quick Sort` e `Binary Insertion Sort` deve essere generico. Inoltre, la libreria deve permettere di specificare (cioè deve accettare in input) il criterio secondo cui ordinare i dati.
-
-### Unit Testing
-
-Implementare gli unit-test per la libreria secondo le indicazioni suggerite nel documento Unit Testing.
-
-### Uso della libreria di ordinamento implementata
-
-Il file `records.csv` che potete trovare (compresso) all'indirizzo
+Using the implemented sorting library: the `records.csv` file that you can find (compressed) at
 
 ```
 https://datacloud.di.unito.it/index.php/s/X7qC8JSLNRtLxPC
 ```
 
-contiene 20 milioni di record da ordinare.
-Ogni record è descritto su una riga e contiene i seguenti campi:
+contains 20 million records to be sorted.
+Each record is described on one line and contains the following fields:
 
-- id: (tipo intero) identificatore univoco del record;
-- field1: (tipo stringa) contiene parole estratte dalla divina commedia,
-  potete assumere che i valori non contengano spazi o virgole;
-- field2: (tipo intero);
-- field3: (tipo floating point);
+- id: (integer type) unique identifier of the record;
+- field1: (string type) contains words extracted from the divine comedy,
+  you can assume that the values do not contain spaces or commas;
+- field2: (integer type);
+- field3: (floating point type);
 
-Il formato è un CSV standard: i campi sono separati da virgole; i record sono
-separati da `\n`.
+The format is a standard CSV: fields are separated by commas; records are
+separated by `\n`.
 
-Usando gli algoritmi `Quick Sort` e `Binary Insertion Sort` implementati, si ordinino i *record* (non è sufficiente ordinare i
-singoli campi) contenuti nel file `records.csv` in ordine non decrescente secondo i valori contenuti nei tre campi "field" (pertanto, è necessario ripetere l'ordinamento tre volte, una volta per ciascun campo).
+Using the implemented `Quick Sort` and `Binary Insertion Sort` algorithms, sort the *records* (it is not sufficient to sort the
+individual fields) contained in the `records.csv` file in non-decreasing order according to the values contained in the three `field` fields (therefore, it is necessary to repeat the sorting three times, once for each field).
 
-Si misurino i tempi di risposta variando il criterio di scelta del `pivot` nel `Quick Sort` e si produca una breve relazione in cui si riportano i risultati ottenuti insieme a un loro commento. Nel caso l'ordinamento si protragga per più di 10 minuti potete interrompere l'esecuzione e riportare un fallimento dell'operazione.
+Measure the response times by varying the criterion for choosing the `pivot` in the `Quick Sort` and produce a short report in which the results obtained are given along with a commentary on them. In case the sorting goes on for more than 10 minutes you can stop the execution and report a failure of the operation.
 
-I risultati sono quelli che vi sareste aspettati? Se sì, perché? Se no, fate delle ipotesi circa il motivo per cui gli algoritmi non funzionano come vi aspettate, un algoritmo offre delle prestazioni migliori dell'altro, la scelta del `pivot` influenza le prestazioni di `Quick Sort`. Verificatele e riportate quanto scoperto nella relazione.
+Are the results what you would have expected? If yes, why? If no, make assumptions about why the algorithms do not perform as you expected, one algorithm offers better performance than the other, the choice of `pivot` affects the performance of `Quick Sort`. Check them out and report what you find in the report.
 
-**Si ricorda che** che il file `records.csv` **NON DEVE ESSERE OGGETTO DI COMMIT SU GIT!**
+## Exercise 2
 
-## Esercizio 2 - Skip List
+Realize a data structure called `skip_list`. The `skip_list` is a type of concatenated list that stores an ordered *list* of elements.
 
-### Linguaggio richiesto: C
+In contrast to classical concatenated lists, the `skip_list` is a probabilistic data structure that allows the search operation to be performed with `O(log n)` complexity in terms of time. The operations of inserting and deleting elements can also be realized in `O(log n)` time. For this reason, the `skip_list` is one of the data structures that are often used to index data.
 
-### Testo
+Each node in a concatenated list contains a pointer to the next element in the list. We must then scroll through the list sequentially to find an element in the list. The `skip_list` speeds up the search operation by creating "express paths" that allow us to skip part of the list during the search operation. This is possible because each node of the `skip_list` contains not only a single pointer to the next element in the list, but an array of pointers that allow us to jump to different following points in the list. An example of this pattern is shown in the following figure:
 
-Realizzare una struttura dati chiamata `skip_list`. La `skip_list` è un tipo di lista concatenata che memorizza una *lista ordinata* di elementi.
+![Example of a `skip_list`. From the node containing the number 6, one can jump directly to nodes 9 and 25, without visiting the other nodes.](skiplist.png)
 
-Al contrario delle liste concatenate classiche, la `skip_list` è una struttura dati probabilistica che permette di realizzare l'operazione di ricerca con complessità `O(log n)` in termini di tempo. Anche le operazioni di inserimento e cancellazione di elementi possono essere realizzate in tempo `O(log n)`. Per questa ragione, la `skip_list` è una delle strutture dati che vengono spesso utilizzate per indicizzare dati.
-
-Ogni nodo di una lista concatenata contiene un puntatore all'elemento successivo nella lista. Dobbiamo quindi scorrere la lista sequenzialmente per trovare un elemento nella lista. La `skip_list` velocizza l'operazione di ricerca creando delle "vie espresse" che permettono di saltare parte della lista durante l'operazione di ricerca. Questo è possibile perché ogni nodo della `skip_list` contiene non solo un singolo puntatore al prossimo elemento della lista, ma un array di puntatori che ci permettono di saltare a diversi punti seguenti nella lista. Un esempio di questo schema è rappresentato nella seguente figura:
-
-![Esempio di una `skip_list`. Dal nodo che contiene il numero 6 si può saltare direttamente ai nodi 9 e 25, senza visitare gli altri nodi.](skiplist.png)
-
-Si implementi quindi una libreria che realizza la struttura dati `skip_list`. L'implementazione deve essere generica per quanto riguarda il tipo dei dati memorizzati nella struttura. Come suggerimento, una possibile definizione del tipo di dati `skip_list` è la seguente:
+Then implement a library that implements the `skip_list` data structure. The implementation should be generic in terms of the type of data stored in the structure. As a suggestion, a possible definition of the `skip_list` data type is as follows:
 
 ```
 #define MAX_HEIGHT ....
@@ -207,17 +79,15 @@ struct _Node {
 };
 ```
 
-Dove:
+Where:
 
-- `MAX_HEIGHT`: è una costante che definisce il massimo numero di puntatori che possono esserci in un singolo nodo della `skip_list`. Come si vede nella figura, ogni nodo può avere un numero distinto di puntatori.
+- `MAX_HEIGHT`: is a constant that defines the maximum number of pointers that can be in a single node of the `skip_list`. As seen in the figure, each node can have a distinct number of pointers.
+- `unsigned int size`: is the number of pointers in a given node of the `skip_list`.
+- `unsigned int max_level`: determines the current maximum among the various `sizes`.
 
-- `unsigned int size`: è il numero di puntatori in un dato nodo della `skip_list`.
+The library must include the two operations listed below, which are given in pseudo-code. Translate the pseudo-code into C.
 
-- `unsigned int max_level`: determina il massimo attuale tra i vari `size`.
 
-La libreria deve includere le due operazioni elencate sotto, che sono riportate in pseudo-codice. Tradurre lo pseudo-codice in C.
-
-##### insertSkipList: Inserisce I nella skiplist ``list``
 ```
 insertSkipList(list, I)
 
@@ -236,7 +106,7 @@ insertSkipList(list, I)
             x = x->next[k]
 ```
 
-La funzione ``randomLevel()`` determina il numero di puntatori da includere nel nuovo nodo e deve essere realizzata conformemente al seguente algoritmo. Spiegare il vantaggio di questo algoritmo nella relazione da consegnare con l'esercizio:
+The ``randomLevel()`` function determines the number of pointers to be included in the new node and must be implemented in accordance with the following algorithm. Explain the advantage of this algorithm in the report to be delivered with the exercise:
 ```
 randomLevel()
     lvl = 1
@@ -247,7 +117,6 @@ randomLevel()
     return lvl
 ```
 
-#####  searchSkipList: Verifica se I è presente nella skiplist list
 ```
 searchSkipList(list, I)
     x = list->head
@@ -266,157 +135,106 @@ searchSkipList(list, I)
 ```
 
 
-La libreria deve anche includere delle funzioni che permettono di creare una `skip_list` vuota e cancellare completamente una `skip_list` esistente. Quest'ultima operazione, in particolare, deve liberare correttamente tutta la memoria allocata per la `skip_list`.
+The library must also include functions to create an empty `skip_list` and completely delete an existing `skip_list`. The latter operation, in particular, must properly free all memory allocated for the `skip_list`.
 
+Implement unit tests for all `skip_list` operations according to the directions suggested in the Unit Testing document.
 
-### Unit Testing
-
-Implementare gli unit-test per tutte le operazioni della `skip_list` secondo le indicazioni suggerite nel documento Unit Testing.
-
-### Uso delle funzioni implementate
-
-All'indirizzo
+At address
 
 ```
 https://datacloud.di.unito.it/index.php/s/taii8aA8rNnXgCN
 ```
-potete trovare un dizionario (`dictionary.txt`) e un file da correggere (`correctme.txt`).
+you can find a dictionary (`dictionary.txt`) and a file to correct (`correctme.txt`).
 
-Il dizionario contiene un elenco di parole. Le parole sono scritte di seguito, ciascuna su una riga.
+The dictionary contains a list of words. The words are written below, each on a line.
 
-Il file `correctme.txt` contiene un testo da correggere. Alcune parole in questo testo non ci sono nel dizionario.
+The file `correctme.txt` contains text to correct. Some words in this text are not in the dictionary.
 
-Si implementi una applicazione che usa la struttura dati ``skip_list`` per determinare in maniera efficiente la lista di parole nel testo da correggere non presenti nel dizionario dato come input al programma.
+Implement an application that uses the ``skip_list`` data structure to efficiently determine the list of words in the text to be corrected that are not in the dictionary given as input to the program.
 
-Si sperimenti il funzionamento dell'applicazione considerando diversi valori per la constante ``MAX_HEIGHT``, riportando in una breve relazione (circa una pagina) i risultati degli esperimenti.
+Experiment with the operation of the application by considering different values for the ``MAX_HEIGHT`` constant, reporting the results of the experiments in a brief report (about one page).
 
-**Si ricorda** che il dizionario e `correctme.txt` **NON DEVONO ESSERE OGGETTO DI COMMIT SU GIT!**
+## Exercise 3
 
-### Condizioni per la consegna:
+Implement a library that realizes the Minimum Heap data structure. The data structure must:
+- represent the heap internally via a vector (other internal support structures can also be used if needed);
+- allow any number of a priori unknown elements of the heap;
+- be generic with regard to the type of the heap elements;
+- be generic with regard to the criterion for comparing heap elements.
 
--- Creare una sottocartella chiamata ``ex2`` all'interno del repository.
+It must, in addition, offer (at least) the following operations (next to each operation is specified the
+required complexity, where n indicates the number of heap elements):
+- creation of a minimum empty heap - O(1);
+- insertion of an element - O(log n);
+- returning the size of the heap - O(1);
+- return of the parent of an element - O(1);
+- return of the left child of an element - O(1);
+- return of the right child of an element - O(1);
+- extraction of the element with minimum value - O(log n);
+- decreasing the value of an element - O(log n).
 
--- La consegna deve obbligatoriamente contenere un `Makefile`. Il `Makefile` deve produrre all'interno di ``ex2/build`` un file eseguibile chiamato ``main_ex2``.
+A description of the Heap data structure can be found on the transparencies and handouts provided in the theory portion of the course,
+ as well as on the text Cormen et al, `Introduction to Algorithms and Data Structures`, McGraw-Hill, Third Edition, 2010, in the chapter `Heapsort`. In particular, reference to the text is suggested for all those aspects not explicitly covered in class.
 
--- ``main_ex2`` deve ricevere come parametri il path del dizionario da usare come riferimento e il file da correggere, necessariamente in quest'ordine. Il risultato va stampato a schermo, con le parole ordinate come nel file da correggere. Per esempio:
-
-```
-$ ./main_ex2 /tmp/data/dictionary.txt /tmp/data/correctme.txt 
-cinqve
-perpeteva
-squola
-domandrono
-vuolessi
-scrissi
-corpito
-wita
-```
-
-## Esercizio 3
-
-### Linguaggio richiesto: Java
-
-### Testo
-
-Si implementi una libreria che realizza la struttura dati Heap Minimo. La struttura dati deve:
-- rappresentare internamente lo heap tramite un vettore (è possibile usare anche altre strutture interne di supporto, se necessarie);
-- consentire un numero qualunque e non noto a priori di elementi dello heap;
-- essere generica per quanto riguarda il tipo degli elementi dello heap;
-- essere generica per quanto riguarda il criterio di confronto fra elementi dello heap.
-
-Essa deve, inoltre, offrire (almeno) le seguenti operazioni (accanto a ogni operazione è specificata la
-complessità richiesta, in cui n indica il numero di elementi dello heap):
-- creazione di uno heap minimo vuoto - O(1);
-- inserimento di un elemento - O(log n);
-- restituzione della dimensione dello heap - O(1);
-- restituzione del genitore di un elemento - O(1);
-- restituzione del figlio sinistro di un elemento - O(1);
-- restituzione del figlio destro di un elemento - O(1);
-- estrazione dell'elemento con valore minimo - O(log n);
-- diminuzione del valore di un elemento - O(log n).
-
-Una descrizione della struttura dati Heap è riportata sui lucidi e le dispense fornite nella parte di teoria del corso,
- nonché sul testo Cormen et al, `Introduzione agli algoritmi e strutture dati`, McGraw-Hill, Terza edizione, 2010, nel capitolo `Heapsort`. In particolare, si suggerisce il riferimento al testo per tutti quegli aspetti non esplicitamente trattati a lezione.
-
-### Unit Testing
-
-Implementare gli unit-test per la libreria secondo le indicazioni suggerite nel documento Unit Testing.
+Implement unit tests for the library as suggested in the Unit Testing document.
 
 ## Esercizio 4
 
-### Linguaggio richiesto: Java
+You implement a library that realizes the Grafo data structure in a way that **is optimal for sparse data**.
+(IMPORTANT: The implementation choices you make must be justified in relation to the concepts presented
+during the classroom lectures). The structure should allow you to represent both directed and undirected graphs
+(HINT: an undirected graph can be represented using a modified implementation for directed graphs
+to ensure that, for every arc (a,b), labeled w, present in the graph, the arc (b,a) is also present in the graph,
+labeled w. Obviously, the graph must retain the information specifying whether it is a directed or undirected graph.).
 
-### Testo
+The implementation must be generic in terms of both the type of the nodes and the labels
+of the arcs.
 
-Si implementi una libreria che realizza la struttura dati Grafo in modo che **sia ottimale per dati sparsi**
-(IMPORTANTE: le scelte implementative che farete dovranno essere giustificate in relazione alle nozioni presentate
-durante le lezioni in aula). La struttura deve consentire di rappresentare sia grafi diretti che grafi non diretti
-(suggerimento:  un grafo non diretto può essere rappresentato usando un'implementazione per grafi diretti modificata
-per garantire che, per ogni arco (a,b), etichettato w, presente nel grafo, sia presente nel grafo anche l'arco (b,a),
-etichettato w. Ovviamente, il grafo dovrà mantenere l'informazione che specifica se esso è un grafo diretto o non diretto.).
+The implemented data structure must offer (at least) the following operations (next to each operation is specified the
+complexity required; n may indicate the number of nodes or the number of arcs, depending on the context):
 
-L'implementazione deve essere generica sia per quanto riguarda il tipo dei nodi, sia per quanto riguarda le etichette
-degli archi.
+- Creating an empty graph - O(1)
+- Adding a node - O(1)
+- Adding an arc - O(1)
+- Checking whether the graph is directed - O(1)
+- Verifies whether the graph contains a given node - O(1)
+- Verification whether the graph contains a given arc - O(1) (*)
+- Deletion of a node - O(n)
+- Deletion of an arc - O(1) (*)
+- Determination of the number of nodes - O(1)
+- Determination of the number of arcs - O(n)
+- Retrieval of the nodes of the graph - O(n)
+- Recovery of the arcs of the graph - O(n)
+- Recovery of adjacent nodes of a given node - O(1) (*)
+- Retrieving label associated with a pair of nodes - O(1) (*)
 
-La struttura dati implementata dovrà offrire (almeno) le seguenti operazioni (accanto a ogni operazione è specificata la
-complessità richiesta; n può indicare il numero di nodi o il numero di archi, a seconda del contesto):
+(*) when the graph is truly sparse, assuming the operation is performed on a node whose adjacency list has a length in O(1).
 
-- Creazione di un grafo vuoto – O(1)
-- Aggiunta di un nodo – O(1)
-- Aggiunta di un arco – O(1)
-- Verifica se il grafo è diretto – O(1)
-- Verifica se il grafo contiene un dato nodo – O(1)
-- Verifica se il grafo contiene un dato arco – O(1)  (*)
-- Cancellazione di un nodo – O(n)
-- Cancellazione di un arco – O(1)  (*)
-- Determinazione del numero di nodi – O(1)
-- Determinazione del numero di archi – O(n)
-- Recupero dei nodi del grafo – O(n)
-- Recupero degli archi del grafo – O(n)
-- Recupero nodi adiacenti di un dato nodo – O(1)  (*)
-- Recupero etichetta associata a una coppia di nodi – O(1) (*)
+Implement the unit tests for the library as suggested in the Unit Testing document.
 
-(*) quando il grafo è veramente sparso, assumendo che l'operazione venga effettuata su un nodo la cui lista di adiacenza ha una lunghezza in O(1).
+Implement Dijkstra's algorithm to determine the minimum paths from a single source in a weighted oriented graph, with arc weights all non-negative.
 
-### Unit Testing
+The implementation of Dijkstra's algorithm must operate on a graph made using the library implemented according to the specifications given above and must also use within it a minimum priority queue represented with a heap made using the library implemented according to the specifications in Exercise 3.
 
-Implementare gli unit-test per la libreria secondo le indicazioni suggerite nel documento Unit Testing.
-
-### Uso delle librerie che implementano la struttura dati Grafo e la struttura dati Heap
-
-Si implementi l'algoritmo di Dijkstra per determinare i cammini minimi da sorgente unica in un grafo orientato pesato, con pesi degli archi tutti non negativi.
-
-L'implementazione dell'algoritmo di Dijkstra dovrà operare su un grafo realizzato tramite la libreria implementata secondo le specifiche fornite sopra e dovrà inoltre utilizzare al proprio interno una coda di priorità minima rappresentata con un heap realizzato con la libreria implementata secondo le specifiche dell'Esercizio 3.
-
-
-### Uso della libreria che implementa la struttura dati Grafo e dell'algoritmo di Dijkstra
-
-Si scriva un'applicazione che utilizza l'algoritmo di Dijkstra implementato per determinare i cammini minimi dalla città di Torino sul grafo descritto nel file italian\_dist\_graph.csv che potete trovare (compresso) all'indirizzo
+Write an application that uses the implemented Dijkstra algorithm to determine the minimum paths from the city of Turin on the graph described in the italian\_dist\graph.csv file that you can find (compressed) at
 
 ```
 https://datacloud.di.unito.it/index.php/s/PirTJpq4JMnpH3G
 ```
 
-Tale file contiene le distanze in metri tra alcune località
-italiane e una frazione delle località a loro più vicine.
-Il formato è un CSV standard: i campi sono separati da virgole; i record sono separati dal carattere di fine
-riga (\\n).
+This file contains the distances in meters between some localities
+Italy and a fraction of the localities nearest to them.
+The format is a standard CSV: fields are separated by commas; records are separated by the end character
+line (\n).
 
-Ogni record contiene i seguenti dati:
+Each record contains the following data:
 
-- località 1: (tipo stringa) nome della località "sorgente". La stringa può contenere spazi, non può contenere virgole;
-- località 2: (tipo stringa) nome della località "destinazione". La stringa  può contenere spazi, non può contenere virgole;
-- distanza: (tipo float) distanza in metri tra le due località.
+- location 1: (string type) name of the "source" location. The string can contain spaces; it cannot contain commas;
+- location 2: (string type) "destination" location name. String can contain spaces, cannot contain commas;
+- distance: (float type) distance in meters between the two locations.
 
-**Note** :
+## License
 
-- potete interpretare le informazioni presenti nelle righe del file come   archi non diretti (pertanto, si suggerisce di inserire nel grafo sia l'arco di andata che quello di ritorno a fronte di ogni riga letta).
-- il file è stato creato a partire da un dataset poco accurato. I dati riportati contengono inesattezze e imprecisioni.
+This project is licensed under the [MIT License](https://github.com/albertoomarino/algorithms-and-data-structures/blob/main/LICENSE).
 
-**Si ricorda** il file italian\_dist\_graph.csv **NON DEVE ESSERE OGGETTO DI COMMIT SU GIT!**
-
-**Controlli**
-
-Un'implementazione corretta dell'algoritmo di Dijkstra, eseguita sui dati
-contenuti nel file italian\_dist\_graph.csv, dovrebbe determinare un cammino
-minimo tra "torino" e "catania" lungo ~1207.68 Km.
+© [Alberto Marino]
